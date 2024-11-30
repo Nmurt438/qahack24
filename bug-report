@@ -1,0 +1,23 @@
+Bug report id
+GET A GAME
+1. Open Postman
+2. Choose GET method 
+3. Enter https://dev-gs.qa-playground.com/api/v1/games/1990ecdd-4d3d-4de2-91b9-d45d794c82bc in the field
+4. Enter key X-Task-Id and value api-9 in Headers
+5. Click on the button Send
+Expected result:
+1. The response of the request is  200 OK, and information about the game is displayed.
+Actual result:
+1. The response of the request is 404 error.
+Bug report id
+GET A USER BY EMAIL AND PASSWORD
+1. Open Postman
+2. Сhoose POST method
+3. Enter https://dev-gs.qa-playground.com/api/v1/users/login
+4. Enter key X-Task-Id anf value api-7 in Headers
+5. Enter email and password in body. User must exist.
+6. Cick on the button send
+Expected result:
+1. The response of the request is  200 OK, and information about the user is displayed.
+Actual result:
+1. The response of the request is 404 error
