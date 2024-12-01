@@ -1,5 +1,6 @@
-Bug report id
+Task id 9
 GET A GAME
+STR:
 1. Open Postman
 2. Choose GET method 
 3. Enter https://dev-gs.qa-playground.com/api/v1/games/1990ecdd-4d3d-4de2-91b9-d45d794c82bc in the field
@@ -9,15 +10,63 @@ Expected result:
 1. The response of the request is  200 OK, and information about the game is displayed.
 Actual result:
 1. The response of the request is 404 error.
-Bug report id
+Task id 7
 GET A USER BY EMAIL AND PASSWORD
+STR:
 1. Open Postman
 2. Сhoose POST method
 3. Enter https://dev-gs.qa-playground.com/api/v1/users/login
-4. Enter key X-Task-Id anf value api-7 in Headers
+4. Enter key X-Task-Id and value api-7 in Headers
 5. Enter email and password in body. User must exist.
 6. Cick on the button send
 Expected result:
 1. The response of the request is  200 OK, and information about the user is displayed.
 Actual result:
 1. The response of the request is 404 error
+Task id 18
+Update status of order
+STR:
+1. Open Postman 
+2. Choose PATCH method
+3. Enter https://dev-gs.qa-playground.com/api/v1/orders/{order_uuid}/status
+4. Enter "status": "canceled" in body
+5. Enter key X-Task-Id and value api-18 in Headers
+6. Click on the button "Send"
+Expected result:
+1. The response is 200 OK, status of the order is updated.
+Actual result:
+1. The response is 422 error,message:"Operation forbidden. Order \"status\": the following statuses cannot be changed: completed, canceled"
+Task id 5
+Add an item to user's wishlist
+STR:
+1.Open Postman
+2. Choose POST method
+3. Enter https://dev-gs.qa-playground.com/api/v1/users/{user_uuid}/wishlist/add 
+4. Enter game_uuid in body
+5. Enter key X-Task-Id and value api-5 in Headers
+5. Click on the button "Send"
+Expected result:
+1. The response is 200 OK, item is added in user's wishilst
+Actual result:
+1. The response is 422 error, message: "Wishlist limit is reached: 10"
+Task ID 13
+Change an item in user's cart
+1.Open Postman
+2. Choose POST method
+3. Enter https://dev-gs.qa-playground.com/api/v1/users/{user-uuid}/cart/change
+4. Enter x X-Task-Id and value api-13 in Headers
+5. Click on the button "Send"
+Expected result:
+1. Game UUID and quantity to change, information about game and quantity and user_uuid is returned.
+Actual result:
+1. Information about total price and user_uuid is returned.
+
+
+
+
+
+
+
+
+
+
