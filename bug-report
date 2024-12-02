@@ -73,6 +73,33 @@ Expected result:
 1. The response is 204, user is deleted.
 Actual result:
 1. The response is 500 error, message:"Internal server error".
+Task ID 22
+Create a new user
+STR:
+1. Open Postman
+2. Choose POST method
+3. Enter https://dev-gs.qa-playground.com/api/v1/users/ 
+4. Write email,password,name,nickname in body
+5. Enter key X-Task-Id and value api-22 in Headers
+6. Click on the button "Send"
+Expected result:
+1. The response is 200 OK, user is created.
+Actual result:
+1. The response is 500 error, message:"Internal server error"
+Task ID 11
+Update user's avatar
+STR:
+1. Open Postman
+2. Сhoose PUT method
+3. Enter https://dev-gs.qa-playground.com/api/v1/users/{user_uuid}/avatar
+4. Choose form-data in the body and load a jpeg or png image,maximum size is 2 Mb.
+5. Enter key X-Task-Id and value api-11 in Headers
+6. Click on the button "Send"
+Expected reslut:
+1. The responce of the request is 200 OK, user's avatar is updated.
+Actual result:
+1. The response of the request is 400 error, message: "request body has an error: failed to decode request body: part avatar_url: undefined"
+
 
 
 
