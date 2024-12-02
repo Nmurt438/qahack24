@@ -51,15 +51,28 @@ Actual result:
 1. The response is 422 error, message: "Wishlist limit is reached: 10"
 Task ID 13
 Change an item in user's cart
+STR:
 1.Open Postman
 2. Choose POST method
 3. Enter https://dev-gs.qa-playground.com/api/v1/users/{user-uuid}/cart/change
-4. Enter x X-Task-Id and value api-13 in Headers
+4. Enter key X-Task-Id and value api-13 in Headers
 5. Click on the button "Send"
 Expected result:
 1. Game UUID and quantity to change, information about game and quantity and user_uuid is returned.
 Actual result:
 1. Information about total price and user_uuid is returned.
+Task ID 1
+Delete a user
+STR:
+1. Open Postman
+2. Choose DELETE method
+3. Enter https://dev-gs.qa-playground.com/api/v1/users/{user_uuid}
+4. Enter key  X-Task-Id  and value api-1 in Headers
+5. Click on the button "Send"
+Expected result:
+1. The response is 204, user is deleted.
+Actual result:
+1. The response is 500 error, message:"Internal server error".
 
 
 
