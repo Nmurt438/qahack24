@@ -1,5 +1,5 @@
 Task id 9
-GET A GAME
+Get a game
 STR:
 1. Open Postman
 2. Choose GET method 
@@ -11,7 +11,7 @@ Expected result:
 Actual result:
 1. The response of the request is 404 error.
 Task id 7
-GET A USER BY EMAIL AND PASSWORD
+Get a user by email and password
 STR:
 1. Open Postman
 2. Сhoose POST method
@@ -99,7 +99,7 @@ Expected reslut:
 1. The responce of the request is 200 OK, user's avatar is updated.
 Actual result:
 1. The response of the request is 400 error, message: "request body has an error: failed to decode request body: part avatar_url: undefined"
-
+ 
 
 
 
